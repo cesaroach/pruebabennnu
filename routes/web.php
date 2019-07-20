@@ -11,6 +11,7 @@
 |
 */
 Route::post('/subscriptions', 'SubscriptionController@create');
+Route::delete('/subscriptions/{sid}', 'SubscriptionController@cancel');
 Route::get('/', function () {
     return view('welcome');
 });

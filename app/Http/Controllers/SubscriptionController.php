@@ -18,4 +18,12 @@ class SubscriptionController extends Controller
 
         return response()->json(null, 200);
     }
+
+    public function cancel($sid) {
+        $subscription = Subscription::findOrFail($sid);
+        $subscription->active = 0;
+        $subscription->save();
+
+        return response()->json(null, 200);
+    }
 }
