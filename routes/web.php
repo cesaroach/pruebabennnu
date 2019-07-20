@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::post('/subscriptions', 'SubscriptionController@create');
 Route::get('/', function () {
     return view('welcome');
 });
